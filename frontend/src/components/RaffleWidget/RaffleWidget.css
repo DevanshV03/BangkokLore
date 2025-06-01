@@ -87,3 +87,14 @@
   background: #333;
   transform: translateY(-2px);
 }
+@media (768px) {
+    .raffle-widget{
+    margin-right: 0px;
+    }
+}
+
+@media (480px) {
+    .raffle-widget{
+    margin-right: 0px;
+    }
+}
