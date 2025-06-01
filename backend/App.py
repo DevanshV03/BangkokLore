@@ -21,7 +21,9 @@ if not all([AIVEN_USER, AIVEN_HOST, AIVEN_PASSWORD, AIVEN_DB, AIVEN_PORT]):
     raise ValueError("Missing database credentials")
 
 app=Flask(__name__)
-CORS(app)
+CORS(app, origins = [
+    "https://localhost:3000"
+])
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 
