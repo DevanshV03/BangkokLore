@@ -69,29 +69,42 @@ const StoryGrid = () => {
     }, []);
 
     return (
-        <section className="maincontent">
-            <div className="gridcontent">
-                <div className="left-pane">
-                    <h1>Trending Stories</h1>
-                    
-                    <div className="stories-grid">
-                        {stories.map(story => (
-                            <StoryCard key={story.id} story={story} />
-                        ))}
-                    </div>
-                </div>
-                
-                <div className="right-pane">
-                    <RaffleWidget />
-                    <h1>Featured Authors</h1>
-                    <div className="authors-list">
-                        {featuredAuthors.map(author => (
-                            <AuthorCard key={author.id} author={author} />
-                        ))}
-                    </div>
-                </div>
+    <div className="maincontent">
+      <div className="gridcontent">
+        <div className="left-pane">
+          <h1>Trending Stories</h1>
+
+          <div className="stories-grid">
+            {stories.map(story => (
+              <StoryCard key={story.id} story={story} />
+            ))}
+          </div>
+
+          <div className="mobile-raffle-section">
+            <RaffleWidget />
+          </div>
+
+          <div className="mobile-authors-section">
+            <h1>Featured Authors</h1>
+            <div className="authors-list">
+              {featuredAuthors.map(author => (
+                <AuthorCard key={author.id} author={author} />
+              ))}
             </div>
-        </section>
+          </div>
+        </div>
+
+        <div className="right-pane">
+          <RaffleWidget />
+          <h1>Featured Authors</h1>
+          <div className="authors-list">
+            {featuredAuthors.map(author => (
+              <AuthorCard key={author.id} author={author} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
     );  
 };
 

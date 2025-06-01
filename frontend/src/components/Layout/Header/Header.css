@@ -129,24 +129,122 @@
   box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
 }
 
-@media (max-width: 512px)  {
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.header__hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--accent-charcoal);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.header__hamburger--open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger--open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.header__nav--mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: var(--neutral-ivory);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.header__nav--mobile-open {
+  right: 0;
+}
+
+.header__mobile-btn {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  color: var(--accent-charcoal);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-family: var(--font-body);
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header__mobile-btn:hover {
+  background: var(--primary-coral);
+  color: var(--neutral-ivory);
+}
+
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+@media (max-width: 768px) {
+
+  .header__nav--desktop {
+    display: none;
+  }
+  
+ 
+  .header__hamburger {
+    display: flex;
+  }
+  
+  .header__explore-btn {
+    display: none; 
+  }
+}
+
+@media (max-width: 512px) {
   .header h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .header__container{
     padding: 0 var(--spacing-md);
-  }
-
-  .header__explore-btn{
-    visibility: hidden;
   }
 }
 
 @media (max-width: 380px) {
   .header{
-    padding:0;
+    padding: var(--spacing-md) 0;
   }
- 
+  
+  .header h1{
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-height: 680px){

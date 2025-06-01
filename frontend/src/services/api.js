@@ -92,7 +92,7 @@ export const storyAPI = {
         }
     },
 
-    // ✅ Test webhook functionality
+
     testWebhook: async (eventType = 'checkout.session.completed') => {
         try {
             const response = await fetch(`${API_BASE_URL}/api/test-webhook`, {

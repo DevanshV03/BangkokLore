@@ -1,10 +1,12 @@
 .raffle-widget {
+  max-width: 425px;
   background: white;
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: var(--spacing-lg);
   border: 1px solid var(--neutral-light-gray);
+  margin-top: var(--spacing-lg);
 }
 
 .raffle-widget__title {

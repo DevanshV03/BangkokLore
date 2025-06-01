@@ -4,3 +4,9 @@
     background: var(--neutral-ivory);
     overflow: hidden;
 }
+
+@media (max-width: 512px) {
+    .feed{
+    overflow: scroll;
+    }
+}

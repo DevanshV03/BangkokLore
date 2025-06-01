@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../../components/Layout/Header/Header';
 import './RaffleCancel.css';
 
 const RaffleCancel = () => {
   return (
     <div className="raffle-cancel">
-      <Header isLandingPage={false} />
       
       <div className="raffle-cancel__container">
         <div className="raffle-cancel__content">

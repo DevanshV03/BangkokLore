@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Header from '../../components/Layout/Header/Header';
 import './RaffleSuccess.css';
 
 const RaffleSuccess = () => {
@@ -14,7 +13,6 @@ const RaffleSuccess = () => {
 
   return (
     <div className="raffle-success">
-      <Header isLandingPage={false} />
       
       <div className="raffle-success__container">
         <div className="raffle-success__content">
@@ -29,7 +27,6 @@ const RaffleSuccess = () => {
           <div className="raffle-success__details">
             <p>✅ You have been entered into the raffle</p>
             <p>✅ Your ticket has been added to your account</p>
-            <p>✅ You will receive an email confirmation shortly</p>
           </div>
 
           {sessionId && (
