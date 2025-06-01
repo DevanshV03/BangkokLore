@@ -1,0 +1,117 @@
+
+
+.maincontent {
+  position: static;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  overflow: hidden; 
+}
+
+.gridcontent{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    width: 100vw;
+    height: 100vh;
+}
+
+.gridcontent h1{
+    color: var(--accent-charcoal);
+    margin-left: var(--spacing-xl);
+    padding-top: var(--spacing-2xl);
+    font-weight: 900;
+}
+
+
+.gridcontent .left-pane{
+    width: 70%;
+    height: 100vh; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    padding-right: var(--spacing-md); 
+}
+
+
+.gridcontent .left-pane::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gridcontent .left-pane::-webkit-scrollbar-track {
+    background: var(--neutral-light-gray);
+    border-radius: 4px;
+}
+
+.gridcontent .left-pane::-webkit-scrollbar-thumb {
+    background: var(--primary-coral);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.gridcontent .left-pane::-webkit-scrollbar-thumb:hover {
+    background: #d81b60;
+}
+
+.gridcontent .right-pane{
+    width: 30%;
+    height: 100vh; 
+   border-left: 1px solid rgba(66, 66, 66, 0.3);
+    padding-left: var(--spacing-lg);
+    overflow-y: auto; 
+    position: sticky; 
+    top: 0;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    margin-bottom: 100px; 
+}
+
+.authors-list {
+   gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    margin-bottom: 100px; 
+
+}
+
+
+@media (max-width: 1024px) {
+    .stories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .gridcontent {
+        flex-direction: column;
+        height: auto; 
+    }
+    
+    .gridcontent .left-pane,
+    .gridcontent .right-pane {
+        width: 100%;
+        height: auto; 
+        overflow-y: visible; 
+    }
+    
+    .gridcontent .right-pane {
+        border-left: none;
+        border-top: 2px solid var(--accent-charcoal);
+        padding-left: 0;
+        padding-top: var(--spacing-lg);
+        position: static; 
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
