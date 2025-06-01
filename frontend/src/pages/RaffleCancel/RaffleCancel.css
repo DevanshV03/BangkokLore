@@ -1,0 +1,78 @@
+.raffle-cancel {
+  min-height: 100vh;
+  background: var(--neutral-ivory);
+  padding-top: 120px;
+}
+
+.raffle-cancel__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl);
+}
+
+.raffle-cancel__content {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.raffle-cancel__icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.raffle-cancel__title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--accent-charcoal);
+  margin-bottom: var(--spacing-lg);
+}
+
+.raffle-cancel__message {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--accent-charcoal);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.raffle-cancel__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.raffle-cancel__btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.raffle-cancel__btn--primary {
+  background: var(--primary-coral);
+  color: white;
+}
+
+.raffle-cancel__btn--primary:hover {
+  background: #d81b60;
+  transform: translateY(-2px);
+}
+
+.raffle-cancel__btn--secondary {
+  background: var(--accent-charcoal);
+  color: white;
+}
+
+.raffle-cancel__btn--secondary:hover {
+  background: #333;
+  transform: translateY(-2px);
+}

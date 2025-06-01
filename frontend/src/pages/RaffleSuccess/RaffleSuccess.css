@@ -1,0 +1,112 @@
+.raffle-success {
+  min-height: 100vh;
+  background: var(--neutral-ivory);
+  padding-top: 120px;
+}
+
+.raffle-success__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl);
+}
+
+.raffle-success__content {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.raffle-success__icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.raffle-success__title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--accent-charcoal);
+  margin-bottom: var(--spacing-lg);
+}
+
+.raffle-success__message {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--accent-charcoal);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.raffle-success__details {
+  background: #e8f5e8;
+  border: 1px solid #4caf50;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.raffle-success__details p {
+  font-family: var(--font-body);
+  color: #2e7d32;
+  margin: var(--spacing-sm) 0;
+  font-weight: 500;
+}
+
+.raffle-success__session {
+  margin-bottom: var(--spacing-lg);
+}
+
+.raffle-success__session small {
+  color: #666;
+  font-family: monospace;
+}
+
+.raffle-success__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.raffle-success__btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.raffle-success__btn--primary {
+  background: var(--primary-coral);
+  color: white;
+}
+
+.raffle-success__btn--primary:hover {
+  background: #d81b60;
+  transform: translateY(-2px);
+}
+
+.raffle-success__btn--secondary {
+  background: var(--accent-charcoal);
+  color: white;
+}
+
+.raffle-success__btn--secondary:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .raffle-success__actions {
+    flex-direction: column;
+  }
+  
+  .raffle-success__title {
+    font-size: 2rem;
+  }
+}

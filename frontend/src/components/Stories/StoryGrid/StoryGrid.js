@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import StoryCard from "../StoryCard/StoryCard";
 import AuthorCard from "../AuthorCard/AuthorCard";
 import { storyAPI } from "../../../services/api";
+import RaffleWidget from "../../RaffleWidget/RaffleWidget";
 import './StoryGrid.css';
 
 
@@ -81,6 +82,7 @@ const StoryGrid = () => {
                 </div>
                 
                 <div className="right-pane">
+                    <RaffleWidget />
                     <h1>Featured Authors</h1>
                     <div className="authors-list">
                         {featuredAuthors.map(author => (

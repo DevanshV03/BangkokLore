@@ -3,6 +3,8 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from api.getstories import getstories_bp
 from api.submitlore import submitlore_bp
+from api.raffle import raffle_bp
+from api.stripe_integration import stripe_bp
 import os
 
 load_dotenv()
@@ -46,6 +48,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 app.register_blueprint(getstories_bp)
 app.register_blueprint(submitlore_bp)
+app.register_blueprint(raffle_bp)
+app.register_blueprint(stripe_bp)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
