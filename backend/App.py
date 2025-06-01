@@ -22,7 +22,8 @@ if not all([AIVEN_USER, AIVEN_HOST, AIVEN_PASSWORD, AIVEN_DB, AIVEN_PORT]):
 
 app=Flask(__name__)
 CORS(app, origins = [
-    "https://localhost:3000"
+    "https://localhost:3000",
+    "https://bangkoklore.netlify.app/"
 ])
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
