@@ -4,7 +4,7 @@ import { storyAPI } from '../../services/api';
 import './RaffleWidget.css';
 
 // Initialize Stripe with your publishable key
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || "pk_test_51RV9H9R6Li1a9Y13sD1rmk11UNHsxROQch5p2gc91YRGsnqQiEd45BHyrZcztrg3falN4HT0V0HirsnQK7bQ52Mz00GlioMG1v")
 
 const RaffleWidget = () => {
   const [tickets, setTickets] = useState(0);

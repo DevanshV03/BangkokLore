@@ -78,7 +78,6 @@ def stripe_webhook():
         print(f" Session ID: {session['id']}")
         print(f" Amount paid: {session['amount_total']} cents")
         
-        # Add ticket to user's count (using raffle system)
         from api.raffle import user_tickets
         if user_id not in user_tickets:
             user_tickets[user_id] = 0
@@ -92,7 +91,6 @@ def stripe_webhook():
             'message': f'Payment successful! User now has {user_tickets[user_id]} tickets'
         })
     
-    # Handle payment_intent.payment_failed event
     elif event['type'] == 'payment_intent.payment_failed':
         payment_intent = event['data']['object']
         
@@ -105,7 +103,6 @@ def stripe_webhook():
             'message': 'Payment was not successful'
         })
     
-    # Handle other events
     else:
         print(f" Unhandled event type: {event['type']}")
         return jsonify({'success': True, 'message': f'Event {event["type"]} received'})

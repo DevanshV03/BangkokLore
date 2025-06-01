@@ -1,4 +1,3 @@
-/* src/components/landing/HeroSection/HeroSection.css */
 .hero {
   position: relative;
   height: 100vh;
@@ -87,22 +86,30 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+
+@media (max-width: 512px) {
+  .hero{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
   .hero__content {
     padding: 0 var(--spacing-md);
+    margin-top: var(--spacing-md);
   }
   
   .hero__title {
     margin-bottom: var(--spacing-md);
+    font-size: 2rem;
   }
   
   .hero__description {
     margin-bottom: var(--spacing-xl);
+    font-size: 0.9rem;
   }
   
   .hero__cta {
     padding: var(--spacing-sm) var(--spacing-xl);
     font-size: 1rem;
   }
+
 }
