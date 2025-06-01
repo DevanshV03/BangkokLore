@@ -1,5 +1,5 @@
 .raffle-widget {
-  max-width: 425px;
+  margin-right: 20px;
   background: white;
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
