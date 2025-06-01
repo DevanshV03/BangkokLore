@@ -80,5 +80,31 @@ export const storyAPI = {
             console.error('Error creating checkout session:', error);
             throw error;
         }
-      }
+      },
+      getTicketCount: async (userId = 'demo_user') => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/raffle-tickets/${userId}`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error getting ticket count:', error);
+            throw error;
+        }
+    },
+
+    // ✅ Test webhook functionality
+    testWebhook: async (eventType = 'checkout.session.completed') => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/test-webhook`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type: eventType })
+            });
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error testing webhook:', error);
+            throw error;
+        }
+    }
 };
